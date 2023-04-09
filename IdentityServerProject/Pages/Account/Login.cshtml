@@ -1,0 +1,29 @@
+﻿@page
+@model IdentityServerProject.Pages.Account.LoginModel
+@{
+}
+
+<div class="container border" style="padding:15px">
+    <form method="post">
+        <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="Credential.Name"></label>
+                <input asp-for="Credential.Name" type="text" class="form-control"/>
+                <span class="text-danger" asp-validation-for="Credential.Name"></span>
+            </div>
+            </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="Credential.Password"></label>
+                <input asp-for="Credential.Password" type="password" class="form-control"/>
+                <span class="text-danger" asp-validation-for="Credential.Password"></span>
+             </div>
+        </div>
+        <div class="form-group row">
+              <div class="col-2">
+                        <input type="submit" value="login" class="btn btn-primary" />
+              </div>
+        </div>
+    </form>
+</div>
